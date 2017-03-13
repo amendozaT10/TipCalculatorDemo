@@ -14,6 +14,7 @@
 		67996AF31E74B3590087EC71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67996AF11E74B3590087EC71 /* LaunchScreen.storyboard */; };
 		67996AFE1E74B35A0087EC71 /* TipCalculatorDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67996AFD1E74B35A0087EC71 /* TipCalculatorDemoTests.swift */; };
 		67996B091E74B35A0087EC71 /* TipCalculatorDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67996B081E74B35A0087EC71 /* TipCalculatorDemoUITests.swift */; };
+		67996B171E7600590087EC71 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67996B161E7600590087EC71 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		67996B041E74B35A0087EC71 /* TipCalculatorDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TipCalculatorDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		67996B081E74B35A0087EC71 /* TipCalculatorDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipCalculatorDemoUITests.swift; sourceTree = "<group>"; };
 		67996B0A1E74B35A0087EC71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		67996B161E7600590087EC71 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				67996AE81E74B3590087EC71 /* AppDelegate.swift */,
 				67996AEA1E74B3590087EC71 /* ViewController.swift */,
 				67996AEC1E74B3590087EC71 /* Main.storyboard */,
+				67996B161E7600590087EC71 /* SettingsViewController.swift */,
 				67996AEF1E74B3590087EC71 /* Assets.xcassets */,
 				67996AF11E74B3590087EC71 /* LaunchScreen.storyboard */,
 				67996AF41E74B3590087EC71 /* Info.plist */,
@@ -261,6 +264,7 @@
 			files = (
 				67996AEB1E74B3590087EC71 /* ViewController.swift in Sources */,
 				67996AE91E74B3590087EC71 /* AppDelegate.swift in Sources */,
+				67996B171E7600590087EC71 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
