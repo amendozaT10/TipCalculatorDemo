@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var billField: UITextField!
     @IBOutlet weak var tipControl: UISegmentedControl!
+    @IBOutlet weak var currencyLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,12 +65,15 @@ class ViewController: UIViewController {
             
             tipLabal.text = currency! + String(format: "%0.2f", tip)
             totalLabel.text = currency! + String(format: "%0.2f", total)
+            currencyLabel.text = currency!
         } 
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         print("view will appear")
+        
+        calcTip()
     }
     
     override func viewDidAppear(_ animated: Bool) {

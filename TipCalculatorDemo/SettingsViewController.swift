@@ -12,7 +12,8 @@ class SettingsViewController: UIViewController,UITableViewDelegate,UITableViewDa
 
     @IBOutlet var tableView: UITableView!
     
-    var tableData: [String] = ["Dollar", "Rupee", "Yen","Euro","Rupee","Pound","Other"]
+    var tableData: [String] = ["Dollar", "Rupee", "Yen", "Euro", "Pound", "Shekel"]
+    var currencies: [String] = ["$", "₹", "¥", "€", "£", "₪"]
 
     
     override func viewDidLoad() {
@@ -45,25 +46,16 @@ class SettingsViewController: UIViewController,UITableViewDelegate,UITableViewDa
         return cell
     }
     
-    /*func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
-    {
-        return 0
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let alertView = UIAlertView()
+        alertView.addButton(withTitle: "Ok")
+        alertView.title = "Row Selected"
+        alertView.message = self.currencies[indexPath.row]
+        alertView.show()
+        
+        let defaults = UserDefaults.standard
+        defaults.set(self.currencies[indexPath.row], forKey: "currency")
     }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
-    {
-        return UITableViewCell()
-    }
-    
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.tableData.count;
-    }
-    
-    private func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: IndexPath) -> UITableViewCell {
-        let cell:UITableViewCell = self.tableView.dequeueReusableCell(withIdentifier: "cell")! as UITableViewCell
-        cell.textLabel?.text = self.tableData[indexPath.row]
-        return cell
-    }*/
 
     /*
     // MARK: - Navigation
