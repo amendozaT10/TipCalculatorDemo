@@ -63,10 +63,25 @@ class ViewController: UIViewController {
             let tip = bill * tipPercentages[tipControl.selectedSegmentIndex]
             let total = bill + tip
             
-            tipLabal.text = currency! + String(format: "%0.2f", tip)
-            totalLabel.text = currency! + String(format: "%0.2f", total)
+            let formatter = NumberFormatter()
+            formatter.numberStyle = .currency
+            formatter.maximumFractionDigits = 2
+            
+            
+            let totalPlusDollar = formatter.string(from: NSNumber(value: total))!
+            var dollarIndex = totalPlusDollar.index(totalPlusDollar.startIndex, offsetBy: 1)
+            
+            
+            totalLabel.text = currency! + totalPlusDollar.substring(from: dollarIndex)
+            
+            let tipPlusDollar = formatter.string(from: NSNumber(value: tip))!
+            dollarIndex = tipPlusDollar.index(tipPlusDollar.startIndex, offsetBy: 1)
+            
+            tipLabal.text = currency! + tipPlusDollar.substring(from: dollarIndex)
+            
+            
             currencyLabel.text = currency!
-        } 
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
