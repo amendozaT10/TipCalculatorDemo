@@ -55,6 +55,7 @@ class SettingsViewController: UIViewController,UITableViewDelegate,UITableViewDa
         
         let defaults = UserDefaults.standard
         defaults.set(self.currencies[indexPath.row], forKey: "currency")
+        defaults.synchronize()
     }
 
     /*
