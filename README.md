@@ -23,6 +23,8 @@ The following **additional** features are implemented:
 
 - [ ] List anything else that you can get done to improve the app functionality!
 
+* [x] I added a synchronize call after setting a value through UserDefaults so that my DefaultSettings will be flushed to disk.
+
 ## Video Walkthrough 
 
 Here's a walkthrough of implemented user stories:
@@ -33,7 +35,9 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+Figuring out how to have the settings button interaction to set the currency symbol in the Tip View Controller.
+
+FIX: I added the synchronize call after setting a value through UserDefaults so that my DefaultSettings will be flushed to disk.
 
 ## License
 
